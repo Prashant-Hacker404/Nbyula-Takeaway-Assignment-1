@@ -5,13 +5,44 @@ setTimeout(() => {
 }, 2000);
 
 
-const navbar = document.querySelector('.navbar');
+const plus = document.getElementById('plusIcon')
 
-const mainNavbar = document.querySelector('.mainNavbar');
+const btnSchedule = document.getElementById("addBox");
 
-navbar.addEventListener("click",()=>{
-    mainNavbar.classList.toggle('active');
+btnSchedule.addEventListener('click',()=>{
+    plus.classList.toggle('active');
 })
+
+const home = document.getElementById('home');
+const about = document.getElementById('about');
+const myprofile = document.getElementById('myprofile');
+
+const homepage = document.querySelector('.mainContent');
+
+const aboutpage = document.querySelector('.about');
+
+const profilePage = document.querySelector('.profilePage');
+
+
+home.addEventListener('click',()=>{
+    homepage.classList.add('active');
+    aboutpage.classList.remove('active')
+    profilePage.classList.remove('active')
+})
+
+about.addEventListener('click',()=>{
+    homepage.classList.remove('active');
+    aboutpage.classList.add('active')
+    profilePage.classList.remove('active')
+})
+
+
+myprofile.addEventListener('click',()=>{
+    homepage.classList.remove('active');
+    aboutpage.classList.remove('active')
+    profilePage.classList.add('active')
+})
+
 
 
 

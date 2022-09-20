@@ -4,8 +4,25 @@ session_start();
 if( !isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true){
     header("location: ./login.php");
     exit();
+}else{
+    $username = $_SESSION['username'];
+
+include('./assets/db_connect.php');
+
+$checkNewUser = "SELECT * from `users` WHERE `username`='$username'";
+
+$resCheck = mysqli_query($conn,$checkNewUser);
+
+while($row = mysqli_fetch_assoc($resCheck)){
+    if($row['checkNewUser'] == 0){
+        header("location: ./addDetails.php");
+        echo 'this is bug'; 
+    }else{
+        echo 'hello';
+    }
 }
-$username = $_SESSION['username'];
+
+}
 
 ?>
 
@@ -25,54 +42,49 @@ $username = $_SESSION['username'];
 ?>
 
 <body>
-    <!-- <div class="navbar">
+
+    <nav>
         <ul>
-            <li>Home</li>
-            <li>Update Profile</li>
-            <li><a href=" ./assets/logout.php">Logout</a></li>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="about">About</a></li>
+            <li><a href="#" id="myprofile">My Profile</a></li>
+            <li><a href="./assets/logout.php">Logout</a></li>
         </ul>
-    </div> -->
-
-    <div class="navbar">
-        <ion-icon name="apps-outline"></ion-icon>
-    </div>
+    </nav>
 
 
-    <div class="mainNavbar">
-        <ion-icon name="person-outline"></ion-icon>
-        <div class="tab">
-            <div class="username">
-                <?php
-            echo "<p>$username</p>";
-            ?>
-            </div>
+    <div class="mainContent active">
+
+        <div class="heading">
+            <p class="mainheading">Scheduling Meeting</p>
+            <p class="info">Platform where one can schedule meeting with others track their avability and off hours to
+                schedule
+                appoinment easily</p>
         </div>
 
-        <div class="nav">
-            <div class="tab">
-                <a href="update.php">My Details</a>
-            </div>
-            <div class="tab">
-                <a href="update.php">Update Profile</a>
-            </div>
-            <div class="tab">
-                <a href="./assets/logout.php" id="logout">Logout</a>
-            </div>
+        <div class="addBox" id="addBox">
+            <p id=" schedulebtn">
+                <ion-icon id="plusIcon" name="add-outline"></ion-icon>
+                Schedule a Metting
+            </p>
+        </div>
+
+    </div>
+
+    <div class="about">
+        <div class="box">
+            <h1>Schedule Meeting App Terraformer</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni perspiciatis officiis non
+                voluptatibus doloremque. Ullam illum quas et esse eligendi sunt beatae rerum vel labore laborum aliquid
+                perferendis commodi, quo at dicta vitae magni.
+            </p>
         </div>
     </div>
 
-    <div class="heading">
-        <p class="mainheading">Scheduling Meeting</p>
-        <p class="info">Platform where one can schedule meeting with others track their avability and off hours to
-            schedule
-            appoinment easily</p>
-    </div>
 
-    <div class="addBox">
-        <p>
-            <ion-icon name="add-outline"></ion-icon>
-            Schedule a Metting
-        </p>
+    <div class="profilePage">
+        <h1>This is profile page </h1>
     </div>
 
 

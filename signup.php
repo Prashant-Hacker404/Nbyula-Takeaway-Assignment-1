@@ -62,6 +62,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $error = false;
                 $message = "Your Account Is Successfully Created";
                 showAlert($error,$message);
+                header("location: ./login.php");
             }
             
         }
