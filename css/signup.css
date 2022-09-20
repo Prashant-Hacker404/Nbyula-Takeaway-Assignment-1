@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgb(227, 0, 248),rgb(68, 0, 255));
+}
+.container{
+    height:100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formContent{
+    height: 80%;
+    width:400px;
+    background-color: rgba(0, 0, 0, 0.578);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(37, 37, 37, 0.916);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+.formContent .heading{
+    font-size: 30px;
+    color: #fff;
+    font-family: monospace;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.formContent .heading span{
+    font-size: 35px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+form input{
+    height: 7vh;
+    outline: none;
+    border:none;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 19px;
+    border-radius: 25px;
+    background-color: rgb(74, 74, 74);
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(38, 38, 38, 0.5);
+}
+form button{
+    font-family: monospace;
+    position: relative;
+    height: 7vh;
+    border: none;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 19px;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    background:radial-gradient(rgb(0, 157, 255),rgb(0, 255, 242));
+    font-size: 22px;
+}
+.signup{
+    color: #fff;
+    font-size: 19px;
+    margin-top: 30px;
+    text-align: center;
+    width: 85%;
+}
+.signup a{
+    text-decoration: none; 
+    cursor: pointer; 
+}
+span{
+    color: rgb(0, 255, 17);
+    font-weight: 600;
+}
+ion-icon{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    color: rgba(0, 0, 0, 0.669);
+    font-size: 32em;
+    z-index: -2;
+}
+
+
+.error{
+    text-align: center;
+    height:40vh;
+    width:80%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 22px;
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.158);
+    z-index: 100;
+    color: #fff;
+}
+.error .successBox h2{
+    color: rgb(0, 255, 0);
+}
+
+.error .errorBox h2{
+    color: rgb(255, 0, 123);
+}
+.error.close{
+    display: none;
+}

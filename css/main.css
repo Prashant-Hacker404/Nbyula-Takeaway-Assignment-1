@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgb(75, 240, 255),rgb(137, 59, 255));
+    overflow: hidden;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.heading .mainheading{
+    font-family: Lobster;
+    font-size: 7em;
+    text-align: center;
+}
+.heading .info{
+    text-align: center;
+    width: 80%;
+    color: #fff;
+    font-size: 22px;
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+.navbar ion-icon{
+    font-size: 45px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgb(22, 208, 255),inset 3px 3px 5px rgb(101, 252, 209);
+    transition: 0.5s;
+}
+.navbar ion-icon:hover{
+    box-shadow: 3px 3px 5px rgb(22, 208, 255),inset 3px 3px 5px rgb(0, 157, 255);
+}
+.mainNavbar{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(200%,-50%);
+    height: 550px;
+    width: 400px;
+    backdrop-filter:blur(10px);
+    background-color: rgba(255, 255, 255, 0.105);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: monospace;
+    z-index: 10;
+}
+
+.mainNavbar.active{
+    transform: translate(-50%,-50%);
+}
+
+.mainNavbar ion-icon{
+    color: rgb(255, 0, 93);
+    font-size:7em;
+    border:5px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mainNavbar .tab .username{
+    font-size: 22px;
+    color: #fff;
+    background-color: rgba(45, 45, 45, 0.441);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+.mainNavbar .nav
+{
+    margin-top: 50px;
+}
+.mainNavbar .nav .tab{
+    margin-top: 35px;
+    font-size: 30px;
+    text-align: center;
+}  
+.mainNavbar .nav .tab a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #ffff;
+    background: rgba(1, 1, 1, 0.575);
+    padding: 15px;
+    border-radius: 25px;
+}
+#logout{
+    color:rgb(255, 0, 123);
+}
+.addBox{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addBox p{
+    background-color: rgb(58, 255, 193);
+    padding: 20px;
+    font-size: 28px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    font-family: monospace;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.addBox p ion-icon{
+    font-size: 3em;
+    color: #fff;
+
+}
