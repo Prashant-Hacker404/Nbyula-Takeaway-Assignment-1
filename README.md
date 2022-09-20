@@ -5,5 +5,6 @@ This is the nebula take away assignment project
 <h2>Sign up Page</h2>
 <img src="./img/Screenshot (979).png"/>
 <h2>Home Page</h2>
-<img src="./img/"/>
-
+<img src="./img/Screenshot (982).png"/>
+<h2>About page</h2>
+<img src="./img/Screenshot (984).png"/>
